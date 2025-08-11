@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>RexAcademy - Elige tu tema</title>
+        <link rel="stylesheet" href="RexAcademy.css" />
+    </head>
+    <body id="temas">
+        <div class="overlay">
+            <h2>RexAcademy te llama... ¿qué tema dominarás?</h2>
+            <div class="temas-container">
+                <div class="tema disponible" onclick="seleccionarTema('software-libre')">
+                    <img src="imagenes/softwarelibre.png" alt="Software Libre" />
+                    <p>Software Libre</p>
+                </div>
+                <div class="tema bloqueado">
+                    <img src="imagenes/ciber.png" alt="Ciberseguridad" />
+                    <p>Ciberseguridad</p>
+                    <span class="mensaje-bloqueado">En mantenimiento. Volverá con un rugido feroz.</span>
+                </div>
+
+                <div class="tema bloqueado">
+                    <img src="imagenes/programa.png" alt="Programacion" />
+                    <p>Programación</p>
+                    <span class="mensaje-bloqueado"> En mantenimiento. Volverá con un rugido feroz.</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="RexAcademy.js"></script>
+    </body>
+</html>

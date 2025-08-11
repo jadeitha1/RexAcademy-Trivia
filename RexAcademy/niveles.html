@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>RexAcademy - Niveles</title>
+        <link rel="stylesheet" href="RexAcademy.css" />
+    </head>
+    <body id="niveles">
+        <div class="overlay">
+            <h1>Cada nivel, una huella hacia la grandeza</h1>
+            <div class="niveles-container">
+                <div id="nivel-1" class="nivel desbloqueado" onclick="seleccionarNivel(1)">
+                    <img src="imagenes/compsognathus.png" alt="Nivel 1 - Compsognathus" />
+                    <p>Nivel 1: Compsognathus - El pequeño veloz</p>
+                </div>
+
+                <div id="nivel-2" class="nivel bloqueado">
+                    <img src="imagenes/velociraptor.png" alt="Nivel 2 - Velociraptor" />
+                    <p>Nivel 2: Velociraptor - El cazador ágil</p>
+                    <span class="mensaje-bloqueado">❌ Debes desbloquear este nivel completando el anterior.</span>
+                </div>
+
+                <div id="nivel-3" class="nivel bloqueado">
+                    <img src="imagenes/triceratops.png" alt="Nivel 3 - Triceratops" />
+                    <p>Nivel 3: Triceratops - El defensor con cuernos</p>
+                    <span class="mensaje-bloqueado">❌ Debes desbloquear este nivel completando el anterior.</span>
+                </div>
+
+                <div id="nivel-4" class="nivel bloqueado">
+                    <img src="imagenes/stegosaurus.png" alt="Nivel 4 - Stegosaurio" />
+                    <p>Nivel 4: Stegosaurio - El de la cola letal</p>
+                    <span class="mensaje-bloqueado">❌ Debes desbloquear este nivel completando el anterior.</span>
+                </div>
+
+                <div id="nivel-5" class="nivel bloqueado">
+                    <img src="imagenes/trex.png" alt="Nivel 5 - T-Rex" />
+                    <p>Nivel 5: T-Rex - El rey de RexAcademy</p>
+                    <span class="mensaje-bloqueado">❌ Debes desbloquear este nivel completando el anterior.</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="RexAcademy.js"></script>
+
+        <script>
+            window.onload = () => {
+                for (let i = 2; i <= 5; i++) {
+                    if (localStorage.getItem(`nivel${i}_desbloqueado`) === "true") {
+                        const nivel = document.querySelector(`#nivel-${i}`);
+                        if (nivel) {
+                            nivel.classList.remove("bloqueado");
+                            nivel.classList.add("desbloqueado");
+                            nivel.onclick = () => seleccionarNivel(i);
+                            nivel.querySelector(".mensaje-bloqueado")?.remove();
+                        }
+                    }
+                }
+            };
+
+            function seleccionarNivel(n) {
+                if (n === 1) {
+                    window.location.href = "juego.html";
+                } else {
+                    window.location.href = `juego${n}.html`;
+                }
+            }
+        </script>
+    </body>
+</html>

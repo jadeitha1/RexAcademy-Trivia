@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>RexAcademy - Nivel 5</title>
+        <link rel="stylesheet" href="RexAcademy.css" />
+    </head>
+    <body id="juego">
+        <div class="overlay">
+            <h1>Nivel 5: T-Rex</h1>
+
+            <div class="status-bar">
+                <div class="vidas" id="vidas">
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                </div>
+                <div class="puntos">Puntaje: <span id="puntos">0</span></div>
+            </div>
+            <div class="temporizador-texto" id="texto-tiempo"></div>
+            <div class="temporizador-barra">
+                <div id="barra-tiempo"></div>
+            </div>
+            <div id="contenedor-pregunta" class="pregunta"></div>
+            <div id="mensaje" class="mensaje"></div>
+
+            <button id="finalizar" class="btn oculto">Terminar y Volver al Mapa 🦴</button>
+        </div>
+
+        <script src="juego5.js"></script>
+    </body>
+</html>

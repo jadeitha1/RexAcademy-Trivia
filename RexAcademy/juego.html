@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>RexAcademy - Nivel 1</title>
+        <link rel="stylesheet" href="RexAcademy.css" />
+    </head>
+    <body id="juego">
+        <div class="overlay">
+            <h1>Nivel 1: Compsognathus</h1>
+
+            <div class="status-bar">
+                <div class="vidas" id="vidas">
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                    <img src="imagenes/garra.png" alt="Vida" class="garra" />
+                </div>
+                <div class="puntos">Puntaje: <span id="puntos">0</span></div>
+            </div>
+            <div class="temporizador-texto" id="texto-tiempo"></div>
+            <div class="temporizador-barra">
+                <div id="barra-tiempo"></div>
+            </div>
+
+            <div id="contenedor-pregunta" class="pregunta"></div>
+            <div id="mensaje" class="mensaje"></div>
+
+            <button id="siguiente" class="btn oculto">Siguiente pregunta</button>
+            <button id="finalizar" class="btn oculto">Siguiente nivel 🦖</button>
+        </div>
+
+        <script src="juego.js"></script>
+    </body>
+</html>
